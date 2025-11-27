@@ -33,13 +33,7 @@ def scrape(query: str) -> str:
 
 **Your job:**
 - Go to https://search.brave.com and perform a search
-- Use your browser's Developer Tools (Network tab) to analyze the request
-- Figure out:
-  - What URL is being called?
-  - What HTTP method is used?
-  - What headers are required?
-  - What query parameters are needed?
-- Implement the request using the `requests` library
+- Figure out how to get the html for a specific query
 - Return the raw response content
 
 ### 2. Implement `parse()` in `scraper.py`
@@ -55,23 +49,11 @@ def parse(html: str, query: str = "") -> ParsedSerp:
 
 **Your job:**
 - Analyze the HTML structure of Brave Search results
-- Use BeautifulSoup (or another parser) to extract:
+- Use a parser to extract:
   - **Title** of each result
   - **URL** of each result
   - **Snippet/description** of each result
 - Return the first page of results (typically ~10 results)
-
----
-
-## Investigation Tips
-
-1. **Open Developer Tools** (F12 or right-click → Inspect)
-2. **Go to the Network tab** before searching
-3. **Perform a search** on https://search.brave.com
-4. **Look at the requests** - find the main search request
-5. **Examine the request headers** - some may be required
-6. **Look at the Response tab** - understand the HTML structure
-7. **Use the Elements tab** - inspect how results are structured in the DOM
 
 ---
 
